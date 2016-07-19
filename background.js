@@ -6,3 +6,15 @@ chrome.webRequest.onBeforeRequest.addListener(
   //  {urls: ["http://*/*jpg", "https://*/*jpg","http://*/*png", "https://*/*png","http://*/*gif", "https://*/*gif"]},
   {urls: ["*://*/videos/other/*"]},
   ["blocking"])
+chrome.webRequest.onBeforeSendHeaders.addListener(
+  function(details) {
+    for (var i = 0; i < details.requestHeaders.length; ++i) {
+      if (details.requestHeaders[i].name === 'Accept-Encoding') {
+        details.requestHeaders.splice(i, 1);
+        break;
+      }
+    }
+    return {requestHeaders: details.requestHeaders};
+  },
+  {urls: ["<all_urls>"]},
+  ["blocking", "requestHeaders"]);
