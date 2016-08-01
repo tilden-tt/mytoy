@@ -1,12 +1,11 @@
 /* git config example
 git config --global https.proxy https://proxynj.zte.com.cn:80
 git config --global http.proxy http://proxynj.zte.com.cn:80
-git clone https://github.com/tilden-tt/mytoy.git
 git config --global credential.helper store
 git config --global user.name "tilden-tt"
-git config --global  user.email 396614336@qq.com
-
-git config --global push.default simple */
+git config --global user.email 396614336@qq.com
+git config --global push.default simple 
+git clone https://github.com/tilden-tt/mytoy.git */
 
 chrome.webRequest.onBeforeRequest.addListener(
   function(details) { 
