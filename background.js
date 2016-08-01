@@ -1,4 +1,4 @@
-/* git config example
+/* git config example test
 git config --global https.proxy https://proxynj.zte.com.cn:80
 git config --global http.proxy http://proxynj.zte.com.cn:80
 git config --global credential.helper store
