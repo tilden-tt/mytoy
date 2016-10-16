@@ -11,6 +11,10 @@
     "browser_action": {
       //  "default_icon": "icon.png",
         "default_title": "hack-http-headers"
-    }
+    },
+	"content_scripts": [ {
+	"js": [ "my.js"],
+	"matches": [ "http://www.xiachufang.com/*","file://*" ]
+	}]
 }  
 
